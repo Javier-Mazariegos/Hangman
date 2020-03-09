@@ -89,7 +89,27 @@
         //Opcion 1--------------------------------------------
         if(menu == 1)
         { 
-          
+            const char* palabra_elegida = get_random_word();
+            printf("%s\n",palabra_elegida);
+            ocultar_palabra(palabra_elegida);
+            printf("\nIngrese su nombre: ");
+            scanf("%s", nombre_jugador);
+            
+            while(1)
+            {
+             printf("Jugador: %s\n", nombre_jugador);
+             printf("Intentos: %d\n", intentos);
+             printf("Aciertos: %d\n", aciertos);
+             printf("        ");
+             for(int i=0; i<tamaño; i++)
+             {
+              printf("%c ", palabra_oculta[i]);
+             }
+             printf("\n\n Ingrese Letra/Palabra: ");
+             scanf("%s",letras);
+             verificar_palabra(letras, palabra_elegida);
+            // scanf("%d",&ejemplo);
+            }
             
         }
         //----------------------------------------------------
