@@ -15,6 +15,10 @@
 
 
     // Global variables
+    int tamaño = 0;
+    int intentos = 10;
+    int aciertos = 0;
+    char palabra_oculta[] = "";
     const char *word_collection[MAX_WORDS]= {
                         "caracter","internet","algoritmo","variable","google",
                         "aplicacion","programa","facebook","bitcoin",
@@ -31,18 +35,38 @@
 
 
 
-    /*
-    Insert your code here
-    */
+    void ocultar_palabra(const char* palabra)
+    {
+        tamaño = strlen(palabra);
+        for(int i=0; i<tamaño; i++)
+        {
+            palabra_oculta[i] = '_';
+        }
+    }
+
+    void verificar_palabra(char letras[], const char* palabra)
+    {
+        intentos--;
+        if(intentos>=0)
+        {
+         if(strcmp(letras,palabra) == 0)
+         {
+          aciertos++;
+         }
+         else 
+         {
+           printf("No Adivino la palabra\n");
+         }
+        } 
+    }
 
     int main(){
-        // note como se invoca la funcion, la funcion se invoca de esta manera y se guarda en una variable
-        const char* palabra_elegida = get_random_word();
-        printf("%s\n",palabra_elegida);
         int menu = 0;
-        char nombre_jugador[] = "";
-        int intentos = 0;
-        int aciertos = 0;
+        intentos = 10;
+        aciertos = 0;
+        char letras[20] = "";
+        char nombre_jugador[20] = "";
+        int ejemplo;
 
         while(1)
         {
@@ -64,9 +88,9 @@
 
         //Opcion 1--------------------------------------------
         if(menu == 1)
-        {
-            printf("\nIngrese su nombre: ");
-            scanf("%s", nombre_jugador);
+        { 
+          
+            
         }
         //----------------------------------------------------
         }
