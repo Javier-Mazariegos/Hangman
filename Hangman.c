@@ -120,14 +120,14 @@
         {
 
         //Menu-----------------------------------------------
- 
+        printf("\033[0;32m"); 
         printf("\n--------------HANGMAN MENU--------------\n");
         printf("1. Empezar juego\n");
         printf("2. Ver Instrucciones\n");
         printf("3. About\n");
         printf("4. Salir\n");
         printf("----------------------------------------\n");
-
+        printf("\033[0m");
         //Fin menu-------------------------------------------
 
         //Elegir---------------------
@@ -166,24 +166,24 @@
              int gano = verificar_palabra(letras, palabra_elegida);        
              if(gano == 1)
              {
-          
-        
+              system("@cls||clear");
+              printf("\033[0;32m"); 
               printf("######### GANO!!! #########\n");
               printf("Palabra adivinada: '%s'\n",palabra_elegida);
               printf("Jugador: %s\n", nombre_jugador);
               printf("Intentos: %d/10\n", (intentos-10)*-1);
-          
+              printf("\033[0m"); 
               enter();
               break;
              } else if(gano == 2)
              {
-           
+              system("@cls||clear");
               printf("\033[0;31m"); 
               printf("######### GAME OVER #########\n");
               printf("Palabra a adivinar: '%s'\n",palabra_elegida);
               printf("Jugador: %s\n", nombre_jugador);
               printf("Intentos: %d/10\n", 10);
-         
+              printf("\033[0m"); 
               enter();
               break;
              }
@@ -195,7 +195,7 @@
         //opcion 2----------------------------------------------------
         if(menu==2)
         {
-    +
+          printf("\033[0;31m"); 
           printf("----------------------Instrucciones----------------------\n");
           printf("1. Tienes 10 intentos en los que tienes que ir descubriendo la palabra\n");
           printf("2. Puedes ingresar la palabra directamente\n");
@@ -203,7 +203,7 @@
           printf("4. Todas las letras ingresadas tienen que ser en minuscula\n");
           printf("5. El juego termina al adivinar la palbra o al presionar la letra 0\n");
            printf("---------------------------------------------------------\n");
-         
+            printf("\033[0m");
            enter();
           
         }
@@ -212,14 +212,14 @@
         //Opcion 3-----------------------------------------------
         if(menu == 3)
         {
-     
+        printf("\033[1;36m"); 
         printf("----------------------ABOUT----------------------\n");
         printf("Desarrollador: Javier Alejandro Mazariegos Godoy\n");
         printf("Correo electronico: javiermazariegos@ufm.edu\n");
         printf("Numero de telefono: +50255571419\n");
         printf("Programa hecho en C\n");
         printf("--------------------------------------------------\n");
-   
+        printf("\033[0m");
         enter();
         
         }
