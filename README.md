@@ -11,6 +11,7 @@ DEBE HACER UN [FORK DEL PROYECTO!](https://help.github.com/en/github/getting-sta
 
 <!---
 Llene esta seccion con "como correr su proyecto"
+
 -->
 
 <!---
@@ -38,5 +39,7 @@ Agregue aqui lo que usted considere como extra
 
 <!---
 Llene esta seccion con "Su nombre y correo"
+Nobre: Javier Alejandro Mazariegos Godoy
+Correo: javiermazariegos@ufm.edu
 --->
 
